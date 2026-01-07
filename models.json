@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2025-01-04",
+  "lastUpdated": "2026-01-07",
   "models": [
     {
       "id": "llama-3.2-1b-instruct-q4_k_xl",
@@ -45,8 +45,7 @@
       "sizeBytes": 3120266304,
       "quantization": "Q2_K_XL",
       "type": "TEXT",
-      "description": "LFM2 8B parameter model with A1B architecture",
-      "isRecommended": true
+      "description": "LFM2 8B parameter model with A1B architecture"
     },
     {
       "id": "lfm2-2.6b-exp-q4_k_xl",
@@ -56,6 +55,15 @@
       "quantization": "Q4_K_XL",
       "type": "TEXT",
       "description": "LFM2 2.6B experimental model"
+    },
+    {
+      "id": "lfm2.5-1.2b-instruct-q4_k_xl",
+      "name": "LFM2.5-1.2B-Instruct",
+      "url": "https://huggingface.co/unsloth/LFM2.5-1.2B-Instruct-GGUF/resolve/main/LFM2.5-1.2B-Instruct-UD-Q4_K_XL.gguf",
+      "sizeBytes": 730895584,
+      "quantization": "Q4_K_XL",
+      "type": "TEXT",
+      "description": "LFM2.5 1.2B Instruct - compact Liquid model"
     },
     {
       "id": "gemma-3-1b-it-q4_k_xl",
@@ -314,6 +322,15 @@
       "description": "NVIDIA Nemotron Nano 12B v2 - high-quality reasoning model"
     },
     {
+      "id": "falcon-h1r-7b-q2_k_xl",
+      "name": "Falcon-H1R-7B",
+      "url": "https://huggingface.co/unsloth/Falcon-H1R-7B-GGUF/resolve/main/Falcon-H1R-7B-UD-Q2_K_XL.gguf",
+      "sizeBytes": 3275366400,
+      "quantization": "Q2_K_XL",
+      "type": "TEXT",
+      "description": "TII Falcon H1R 7B - hybrid Transformer-Mamba reasoning model, excels at math and code"
+    },
+    {
       "id": "qwen3-vl-2b-instruct-1m-q4_k_xl",
       "name": "Qwen3-VL-2B-Instruct-1M",
       "url": "https://huggingface.co/unsloth/Qwen3-VL-2B-Instruct-1M-GGUF/resolve/main/Qwen3-VL-2B-Instruct-1M-UD-Q4_K_XL.gguf",
@@ -400,6 +417,87 @@
       "quantization": "Q2_K_XL",
       "type": "VISION_LANGUAGE",
       "description": "GLM 4.6V Flash 9B - fast vision-language from Zhipu AI"
+    },
+    {
+      "id": "lfm2.5-vl-1.6b-q8_0",
+      "name": "LFM2.5-VL-1.6B",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/LFM2.5-VL-1.6B-Q8_0.gguf",
+      "mmprojUrl": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/mmproj-LFM2.5-VL-1.6b-Q8_0.gguf",
+      "sizeBytes": 1246254560,
+      "mmprojSizeBytes": 583109888,
+      "quantization": "Q8_0",
+      "type": "VISION_LANGUAGE",
+      "description": "LFM2.5 VL 1.6B - compact Liquid vision-language model"
+    },
+    {
+      "id": "granite-embedding-small-english-r2-q8_0",
+      "name": "Granite Embedding (Small)",
+      "url": "https://huggingface.co/mradermacher/granite-embedding-small-english-r2-GGUF/resolve/main/granite-embedding-small-english-r2.Q8_0.gguf",
+      "sizeBytes": 52000000,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "IBM Granite 47M - 384-dim embeddings for semantic search (recommended)",
+      "embeddingDimension": 384,
+      "maxContextSize": 8192,
+      "isRecommended": true
+    },
+    {
+      "id": "granite-embedding-english-r2-q8_0",
+      "name": "Granite Embedding (Large)",
+      "url": "https://huggingface.co/mradermacher/granite-embedding-english-r2-GGUF/resolve/main/granite-embedding-english-r2.Q8_0.gguf",
+      "sizeBytes": 160000000,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "IBM Granite 278M - 768-dim embeddings for high-quality semantic search",
+      "embeddingDimension": 768,
+      "maxContextSize": 8192
+    },
+    {
+      "id": "embeddinggemma-300m-q8_0",
+      "name": "EmbeddingGemma (Premium)",
+      "url": "https://huggingface.co/unsloth/embeddinggemma-300m-GGUF/resolve/main/embeddinggemma-300M-Q8_0.gguf",
+      "sizeBytes": 329000000,
+      "quantization": "Q8_0",
+      "type": "EMBEDDING",
+      "description": "Google Gemma-based 300M - 768-dim embeddings, highest quality retrieval",
+      "embeddingDimension": 768,
+      "maxContextSize": 2048
+    },
+    {
+      "id": "smolvlm2-256m-vision-helper",
+      "name": "SmolVLM2-256M (Faster)",
+      "url": "https://huggingface.co/mradermacher/SmolVLM2-256M-Video-Instruct-i1-GGUF/resolve/main/SmolVLM2-256M-Video-Instruct.i1-Q6_K.gguf",
+      "mmprojUrl": "https://huggingface.co/ggml-org/SmolVLM2-256M-Video-Instruct-GGUF/resolve/main/mmproj-SmolVLM2-256M-Video-Instruct-f16.gguf",
+      "sizeBytes": 143998608,
+      "mmprojSizeBytes": 195706016,
+      "quantization": "i1-Q6_K",
+      "type": "VISION_HELPER",
+      "description": "Ultra-tiny VLM for fast image descriptions. Smaller and faster but less detailed",
+      "maxContextSize": 8192
+    },
+    {
+      "id": "smolvlm2-500m-vision-helper",
+      "name": "SmolVLM2-500M (Better)",
+      "url": "https://huggingface.co/mradermacher/SmolVLM2-500M-Video-Instruct-i1-GGUF/resolve/main/SmolVLM2-500M-Video-Instruct.i1-Q6_K.gguf",
+      "mmprojUrl": "https://huggingface.co/ggml-org/SmolVLM2-500M-Video-Instruct-GGUF/resolve/main/mmproj-SmolVLM2-500M-Video-Instruct-f16.gguf",
+      "sizeBytes": 357785760,
+      "mmprojSizeBytes": 204898464,
+      "quantization": "i1-Q6_K",
+      "type": "VISION_HELPER",
+      "description": "Small VLM for detailed image descriptions. Better quality but slower",
+      "maxContextSize": 8192
+    },
+    {
+      "id": "smolvlm2-2b-vision-helper",
+      "name": "SmolVLM2-2.2B (Best)",
+      "url": "https://huggingface.co/mradermacher/SmolVLM2-2.2B-Instruct-i1-GGUF/resolve/main/SmolVLM2-2.2B-Instruct.i1-Q6_K.gguf",
+      "mmprojUrl": "https://huggingface.co/ggml-org/SmolVLM2-2.2B-Instruct-GGUF/resolve/main/mmproj-SmolVLM2-2.2B-Instruct-f16.gguf",
+      "sizeBytes": 1580097696,
+      "mmprojSizeBytes": 1117406368,
+      "quantization": "i1-Q6_K",
+      "type": "VISION_HELPER",
+      "description": "Largest VLM for most detailed and accurate image descriptions",
+      "maxContextSize": 8192
     }
   ]
 }
